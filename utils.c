@@ -6,20 +6,20 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 00:31:20 by maragao           #+#    #+#             */
-/*   Updated: 2022/11/29 19:30:41 by maragao          ###   ########.rio      */
+/*   Updated: 2022/11/29 20:50:28 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *s)
+int	ft_atoi(char *s)
 {
 	int	i;
 	int	res;
 
 	i = 0;
 	res = 0;
-	if (s[i] == '-' || s[i] '+')
+	if (s[i] == '-' || s[i] == '+')
 		i++;
 	else if (s[i] == '+')
 		i++;
@@ -36,7 +36,7 @@ int	ft_strcmp(const char *s1, const char *s2)
 	size_t	i;
 
 	i = 0;
-	while (s1[i] == s2[i] && && s1[i] && s2[i])
+	while (s1[i] == s2[i] && s1[i] && s2[i])
 		i++;
 	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }

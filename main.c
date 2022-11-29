@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:44:34 by maragao           #+#    #+#             */
-/*   Updated: 2022/11/29 19:34:36 by maragao          ###   ########.rio      */
+/*   Updated: 2022/11/29 20:49:09 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ t_list *fill_stack_a(int argc, char **argv)
 	stack_a = NULL;
 	i = 1;
 	while (i < argc - 1)
-		lst_add_back(stack_a, lst_new(ft_atoi(argv[i++])));
+	{
+		lst_add_back(stack_a, lst_new(ft_atoi(argv[i])));
+		i++;
+	}
 	return (stack_a);
 }
 
@@ -67,7 +70,7 @@ int	check_repeated(int argc, char **argv)
 		j = i + 1;
 		while (j < argc - 1)
 		{
-			if (ft_strncmp(argv[i], argv[j]) == 0)
+			if (ft_strcmp(argv[i], argv[j]) == 0)
 				return (-1);
 			j++;
 		}
@@ -78,8 +81,8 @@ int	check_repeated(int argc, char **argv)
 
 int	main(int argc, char **argv)
 {
-	t_list	stack_a;
-	t_list	stack_b;
+	t_list	*stack_a;
+	t_list	*stack_b;
 
 	stack_b = NULL;
 	if (check_number(argc, argv) == -1)
