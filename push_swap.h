@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:41:41 by maragao           #+#    #+#             */
-/*   Updated: 2022/11/30 17:47:58 by maragao          ###   ########.rio      */
+/*   Updated: 2022/11/30 19:54:18 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int		check_repeated(char **argv);
 void	error(void);
 void	ft_putnbr(int n);
 void	print_stack(t_list *ptr);
-t_list	*swap(t_list *stack);
+void	swap(t_list **stack);
+//t_list	*swap(t_list *stack);
 
 #endif
