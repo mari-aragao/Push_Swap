@@ -6,13 +6,13 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 18:47:15 by maragao           #+#    #+#             */
-/*   Updated: 2022/11/29 18:48:28 by maragao          ###   ########.rio      */
+/*   Updated: 2022/11/29 20:30:04 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	error(void)
+void	error()
 {
 	write(1, "Error\n", 6);
 }

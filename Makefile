@@ -1,4 +1,4 @@
-NAME	= fractol
+NAME	= push_swap
 
 SRCS	=	\
 		main.c \
