@@ -2,7 +2,7 @@ NAME	= push_swap
 
 SRCS	=	\
 		main.c \
-		error.c \
+		checks.c \
 		lst_add_back.c \
 		lst_add_front.c \
 		lst_last.c \

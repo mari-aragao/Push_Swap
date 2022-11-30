@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 00:31:20 by maragao           #+#    #+#             */
-/*   Updated: 2022/11/29 20:50:28 by maragao          ###   ########.rio      */
+/*   Updated: 2022/11/30 16:40:06 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	ft_atoi(char *s)
 	res = 0;
 	if (s[i] == '-' || s[i] == '+')
 		i++;
-	else if (s[i] == '+')
-		i++;
 	while (s[i] != 0 && (s[i] >= 48 && s[i] <= 57))
 		res = (res * 10) + (s[i++] - 48);
 	if (s[0] == '-')
@@ -30,6 +28,21 @@ int	ft_atoi(char *s)
 	return (res);
 }
 
+long int	ft_atoi_long(char *s)
+{
+	int			i;
+	long int	res;
+
+	i = 0;
+	res = 0;
+	if (s[i] == '-' || s[i] == '+')
+		i++;
+	while (s[i] != 0 && (s[i] >= 48 && s[i] <= 57))
+		res = (res * 10) + (s[i++] - 48);
+	if (s[0] == '-')
+		res = -res;
+	return (res);
+}
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
