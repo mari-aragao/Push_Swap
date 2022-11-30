@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:41:41 by maragao           #+#    #+#             */
-/*   Updated: 2022/11/30 17:17:39 by maragao          ###   ########.rio      */
+/*   Updated: 2022/11/30 17:47:58 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ t_list	*lst_new(int content);
 t_list	*lst_last(t_list *lst);
 void	lst_add_front(t_list **lst, t_list *new);
 void	lst_add_back(t_list *lst, t_list *new);
+int		lst_size(t_list *lst);
 int		ft_strcmp(const char *s1, const char *s2);
 t_list	*fill_stack(char **argv);
 int		all_checks(int argc, char **argv);
@@ -37,5 +38,6 @@ int		check_repeated(char **argv);
 void	error(void);
 void	ft_putnbr(int n);
 void	print_stack(t_list *ptr);
+t_list	*swap(t_list *stack);
 
 #endif

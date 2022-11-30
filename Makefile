@@ -2,12 +2,14 @@ NAME	= push_swap
 
 SRCS	=	\
 		main.c \
+		utils.c \
 		checks.c \
+		lst_new.c \
+		commands.c \
+		lst_size.c \
+		lst_last.c \
 		lst_add_back.c \
 		lst_add_front.c \
-		lst_last.c \
-		lst_new.c \
-		utils.c \
 
 OBJS	= ${SRCS:.c=.o}
 
