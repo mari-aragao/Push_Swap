@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:41:41 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/01 17:17:11 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/01 17:52:20 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ void	print_stack(t_list *ptr);
 void	swap(t_list **stack);
 void	rotate(t_list **stack);
 void	reverse_rotate(t_list **stack);
+void	push(t_list **stack1, t_list **stack2);
 
 #endif

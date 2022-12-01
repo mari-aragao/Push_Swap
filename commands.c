@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 17:24:43 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/01 17:39:48 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/01 17:57:12 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,19 @@ void	reverse_rotate(t_list **stack)
 
 /*Pega o primeiro elemento no topo de ‘b’ e coloca no topo de ‘a’. Não faz nada se b estiver vazio.*/
 
-void	push(t_list *stack1, t_list stack2)
+void	push(t_list **stack1, t_list **stack2)
 {
 	t_list	*temp;
+	t_list	*temp2;
+	t_list	*temp3;
 
+	if (lst_size(*stack1) == 0)
+		return ;
+	temp = *stack1;
+	temp2 = temp->next;
+	temp->next = NULL;
+	*stack1 = temp2;
+	temp3 = *stack2;
+	temp->next = temp3;
+	*stack2 = temp;
 }
