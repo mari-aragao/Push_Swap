@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 19:34:22 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/01 19:37:35 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/01 20:25:22 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,18 @@ void	reverse_rotate(t_list **stack)
 void	reverse_rotate_a(t_list **stack_a)
 {
 	reverse_rotate(stack_a);
-	write(1, "rra\n", 4)
+	write(1, "rra\n", 4);
 }
 
 void	reverse_rotate_b(t_list **stack_b)
 {
 	reverse_rotate(stack_b);
-	write(1, "rrb\n", 4)
+	write(1, "rrb\n", 4);
 }
 
 void	reverse_rotate_rrr(t_list **stack_a, t_list **stack_b)
 {
 	reverse_rotate(stack_a);
 	reverse_rotate(stack_b);
-	write(1, "rrr\n", 4)
+	write(1, "rrr\n", 4);
 }

@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 19:21:09 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/01 19:27:01 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/01 20:24:54 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	swap_a(t_list **stack_a)
 
 void	swap_b(t_list **stack_b)
 {
-	swap(stack_a);
+	swap(stack_b);
 	write(1, "sb\n", 3);
 }
 

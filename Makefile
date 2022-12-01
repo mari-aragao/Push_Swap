@@ -5,11 +5,15 @@ SRCS	=	\
 		utils.c \
 		checks.c \
 		lst_new.c \
-		commands.c \
 		lst_size.c \
 		lst_last.c \
 		lst_add_back.c \
 		lst_add_front.c \
+		swap.c \
+		rotate.c \
+		reverse_rotate.c\
+		push.c \
+		sort_three.c
 
 OBJS	= ${SRCS:.c=.o}
 

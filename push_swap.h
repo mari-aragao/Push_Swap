@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:41:41 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/01 17:52:20 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/01 20:23:05 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,17 @@ void	swap(t_list **stack);
 void	rotate(t_list **stack);
 void	reverse_rotate(t_list **stack);
 void	push(t_list **stack1, t_list **stack2);
+void	swap_a(t_list **stack_a);
+void	swap_b(t_list **stack_b);
+void	swap_ss(t_list **stack_a, t_list **stack_b);
+void	rotate_a(t_list **stack_a);
+void	rotate_b(t_list **stack_b);
+void	rotate_rr(t_list **stack_a, t_list **stack_b);
+void	push_a(t_list **stack_a, t_list **stack_b);
+void	push_b(t_list **stack_a, t_list **stack_b);
+void	reverse_rotate_a(t_list **stack_a);
+void	reverse_rotate_b(t_list **stack_b);
+void	reverse_rotate_rrr(t_list **stack_a, t_list **stack_b);
+void	sort_three(t_list **stack_a);
 
 #endif
