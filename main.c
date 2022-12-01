@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:44:34 by maragao           #+#    #+#             */
-/*   Updated: 2022/11/30 19:53:40 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/01 17:36:33 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ int	main(int argc, char **argv)
 	print_stack(stack_a);
 	write(1, "\n", 1);
 	swap(&stack_a);
+	print_stack(stack_a);
+	write(1, "\n", 1);
+	reverse_rotate(&stack_a);
 	print_stack(stack_a);
 	write(1, "\n", 1);
 	return (0);
