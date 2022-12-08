@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:44:34 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/01 20:23:13 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/07 17:48:20 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,23 +39,23 @@ int	main(int argc, char **argv)
 	t_list	*stack_a;
 	t_list	*stack_b;
 
-	stack_b = lst_new(2);
+	stack_b = NULL;
 	if (all_checks(argc, argv) == -1)
 	{
 		write(1, "Error\n", 6);
 		return (0);
 	}
 	stack_a = fill_stack(argv);
+	make_index(argc, argv, &stack_a);
+	
+	printf("\n1a stack a:\n");
 	print_stack(stack_a);
-	write(1, "\n", 1);
-//	swap(&stack_a);
-//	print_stack(stack_a);
-//	write(1, "\n", 1);
-//	reverse_rotate(&stack_a);
-//	print_stack(stack_a);
-//	write(1, "\n", 1);
-	sort_three(&stack_a);
+	
+	sort_five(&stack_a, &stack_b);
+	
+	printf("\n2 stack a:\n");
 	print_stack(stack_a);
-	write(1, "\n", 1);
+	printf("\nstack b:\n");
+	print_stack(stack_b);
 	return (0);
 }

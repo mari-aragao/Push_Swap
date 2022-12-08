@@ -13,7 +13,9 @@ SRCS	=	\
 		rotate.c \
 		reverse_rotate.c\
 		push.c \
-		sort_three.c
+		sort_three.c \
+		sort_five.c \
+		index.c
 
 OBJS	= ${SRCS:.c=.o}
 
