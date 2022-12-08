@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 21:11:33 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/07 18:06:17 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/08 17:52:13 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 
 void	find_two_smallest(t_list **stack_a, t_list **stack_b)
 {
-	int	i;
+	int		i;
 	t_list	*temp;
-	
+	int		check;
+
 	i = 0;
 	temp = *stack_a;
+	check = 0;
 	while (i < 5)
 	{
+		if (check == 2)
+			break ;
 		if (temp->index == 0 || temp->index == 1)
 		{
 			temp = temp->next;
 			push_b(stack_a, stack_b);
+			check++;
 		}
 		else
 		{

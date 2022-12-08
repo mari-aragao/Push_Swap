@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:44:34 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/07 17:48:20 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/08 17:56:25 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,14 @@ t_list	*fill_stack(char **argv)
 	return (stack);
 }
 
+void	sort_call(int argc, t_list **stack_a, t_list **stack_b)
+{
+	if (argc == 3 || argc == 4)
+		sort_three(stack_a);
+	else if (argc == 5 || argc ==  6)
+		sort_five(stack_a, stack_b);
+}
+
 int	main(int argc, char **argv)
 {
 	t_list	*stack_a;
@@ -47,15 +55,9 @@ int	main(int argc, char **argv)
 	}
 	stack_a = fill_stack(argv);
 	make_index(argc, argv, &stack_a);
-	
-	printf("\n1a stack a:\n");
+	sort_call(argc, &stack_a, &stack_b);
+
 	print_stack(stack_a);
-	
-	sort_five(&stack_a, &stack_b);
-	
-	printf("\n2 stack a:\n");
-	print_stack(stack_a);
-	printf("\nstack b:\n");
 	print_stack(stack_b);
 	return (0);
 }
