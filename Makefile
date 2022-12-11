@@ -15,6 +15,8 @@ SRCS	=	\
 		push.c \
 		sort_three.c \
 		sort_five.c \
+		radix.c \
+		print_functions.c \
 		index.c
 
 OBJS	= ${SRCS:.c=.o}

@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:41:41 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/07 17:03:36 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/10 23:10:31 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ typedef struct s_list
 {
 	int				content;
 	int	index;
+	char	*bin;
 	struct s_list	*next;
 }					t_list;
 
@@ -39,6 +40,7 @@ int		check_repeated(char **argv);
 void	error(void);
 void	ft_putnbr(int n);
 void	print_stack(t_list *ptr);
+void	print_bin(t_list *ptr);
 void	swap(t_list **stack);
 void	rotate(t_list **stack);
 void	reverse_rotate(t_list **stack);
@@ -59,5 +61,7 @@ void	sort_five(t_list **stack_a, t_list **stack_b);
 int	*sort_array(int argc, int *arr);
 int	*create_array(int argc, char **argv);
 void	make_index(int argc, char **argv, t_list **stack_a);
+char	*binary_converter(int n);
+void	radix_sort(int argc, t_list **stack_a, t_list **stack_b);
 
 #endif

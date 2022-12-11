@@ -6,21 +6,11 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:44:34 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/08 17:56:25 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/10 23:10:45 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	print_stack(t_list *stack)
-{
-	while(stack)
-	{
-		ft_putnbr(stack->content);
-		write(1, " ", 1);
-		stack = stack->next;
-	}
-}
 
 t_list	*fill_stack(char **argv)
 {
@@ -40,6 +30,8 @@ void	sort_call(int argc, t_list **stack_a, t_list **stack_b)
 		sort_three(stack_a);
 	else if (argc == 5 || argc ==  6)
 		sort_five(stack_a, stack_b);
+	else if (argc > 6 && argc < 501)
+		radix_sort(argc, stack_a, stack_b);
 }
 
 int	main(int argc, char **argv)
@@ -55,9 +47,13 @@ int	main(int argc, char **argv)
 	}
 	stack_a = fill_stack(argv);
 	make_index(argc, argv, &stack_a);
+	print_bin(stack_a);
+	printf("\n\n");
 	sort_call(argc, &stack_a, &stack_b);
 
-	print_stack(stack_a);
-	print_stack(stack_b);
+	//print_stack(stack_a);
+	print_bin(stack_a);
+	printf("\n\n");
+	print_bin(stack_b);
 	return (0);
 }
