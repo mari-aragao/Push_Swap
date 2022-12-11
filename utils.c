@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 00:31:20 by maragao           #+#    #+#             */
-/*   Updated: 2022/11/30 16:40:06 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/10 23:23:01 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,4 +73,20 @@ void	ft_putnbr(int n)
 		ft_putnbr(n / 10);
 	res = n % 10 + '0';
 	write (1, &res, 1);
+}
+
+char	*binary_converter(int n)
+{
+	char	*bin;
+	int	i;
+
+	bin = (char *)malloc(9 * sizeof(char));
+	i = 8;
+	while (i >= 0)
+	{
+		bin[i] = n % 2;
+		n = n / 2;
+		i--;
+	}
+	return (bin);
 }
