@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:44:34 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/11 11:59:53 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/11 12:38:17 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,6 @@ int	main(int argc, char **argv)
 	print_bin(stack_a);
 	printf("\n");
 	printf("1o stack b: \n");
-	print_index(stack_b);
+	print_bin(stack_b);
 	return (0);
 }
