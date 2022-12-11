@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:41:41 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/10 23:10:31 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/11 11:26:09 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int		check_repeated(char **argv);
 void	error(void);
 void	ft_putnbr(int n);
 void	print_stack(t_list *ptr);
+void	print_index(t_list *ptr);
 void	print_bin(t_list *ptr);
 void	swap(t_list **stack);
 void	rotate(t_list **stack);

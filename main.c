@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:44:34 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/10 23:10:45 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/11 11:59:53 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,18 @@ int	main(int argc, char **argv)
 	}
 	stack_a = fill_stack(argv);
 	make_index(argc, argv, &stack_a);
+//	print_index(stack_a);
+	printf("1o stack a: \n");
 	print_bin(stack_a);
-	printf("\n\n");
+	printf("\n");
 	sort_call(argc, &stack_a, &stack_b);
 
+	//print_index(stack_a);
 	//print_stack(stack_a);
+	printf("2o stack a: \n");
 	print_bin(stack_a);
-	printf("\n\n");
-	print_bin(stack_b);
+	printf("\n");
+	printf("1o stack b: \n");
+	print_index(stack_b);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 22:25:02 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/10 23:16:57 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/11 12:08:42 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,15 @@ void	radix_sort(int argc, t_list **stack_a, t_list **stack_b)
 {
 //	t_list	*temp;
 	t_list	*temp_a;
-//	t_list	*temp_b;
-	int	i;
+	t_list	*temp_b;
+//	int	i;
 //	int	test;
 	int	count;
+	int	size_b;
 
-	i = 8;
-	while (i >= 8)
-	{
+//	i = 8;
+//	while (i >= 0)
+//	{
 /*		test = 1;
 		temp = *stack_a;
 */		count = 0;
@@ -37,20 +38,26 @@ void	radix_sort(int argc, t_list **stack_a, t_list **stack_b)
 			temp = temp->next;	
 		}
 */		temp_a = *stack_a;
-		while (temp_a && count < argc - 1)
+		temp_b = *stack_b;
+		size_b = 0;
+		while (count < argc - 1)
 		{
+			printf("temp_a = %i\n", temp_a->content);
 			if (temp_a->bin[8] == '0')
-				push_b(stack_a, stack_b);
-			else
-				rotate_a(stack_a);
+			{
+				push_b(&temp_a, stack_b);
+				temp_a = temp_a->next;
+				size_b++;
+			}
+			else if (temp_a->bin[8] == '1')
+				rotate_a(&temp_a);
 			count++;
 		}
-//		temp_b = *stack_b;
-//		while (temp_b && test == 1)
-//		{
-//			temp_b = temp_b->next;
-//			push_a(stack_a, stack_b);
-//		}
-		i--;
-	}
+		while (size_b > 0)
+		{
+			push_a(&temp_a, &temp_b);
+			size_b--;
+		}
+//		i--;
+//	}
 }
