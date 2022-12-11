@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 21:40:53 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/07 17:34:01 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/10 22:23:43 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void	make_index(int argc, char **argv,  t_list **stack_a)
 			if (temp->content == arr[i])
 			{
 				temp->index = i;
+				temp->bin = binary_converter(i);
 				break ;
 			}
 			i++;
@@ -82,14 +83,4 @@ void	make_index(int argc, char **argv,  t_list **stack_a)
 		temp = temp->next;
 	}
 	free(arr);
-}
-
-void	print_index(t_list *stack)
-{
-	while(stack)
-	{
-		ft_putnbr(stack->index);
-		write(1, " ", 1);
-		stack = stack->next;
-	}
 }

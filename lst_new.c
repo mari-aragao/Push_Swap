@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 00:24:44 by maragao           #+#    #+#             */
-/*   Updated: 2022/11/29 21:40:23 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/10 22:14:54 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -20,6 +20,7 @@ t_list	*lst_new(int content)
 		return (NULL);
 	ptr->content = content;
 	ptr->index = 0;
+	ptr->bin = NULL;
 	ptr->next = NULL;
 	return (ptr);
 }
