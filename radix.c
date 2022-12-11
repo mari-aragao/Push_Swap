@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 22:25:02 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/11 14:09:46 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/11 14:12:47 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@ void	radix_sort(int argc, t_list **stack_a, t_list **stack_b)
 	int	size_b;
 
 	i = 8;
-//	while (i >= 7)
-//	{
+	while (i >= 5)
+	{
 /*		test = 1;
-		temp = *stack_a;
 */		count = 0;
 /*		while (temp)
 		{
@@ -43,7 +42,7 @@ void	radix_sort(int argc, t_list **stack_a, t_list **stack_b)
 				push_b(stack_a, stack_b);
 				size_b++;
 			}
-			else if ((*stack_a)->bin[8] == '1')
+			else if ((*stack_a)->bin[i] == '1')
 				rotate_a(stack_a);
 			count++;
 		}
@@ -52,6 +51,6 @@ void	radix_sort(int argc, t_list **stack_a, t_list **stack_b)
 			push_a(stack_a, stack_b);
 			size_b--;
 		}
-//		i--;
-//	}
+		i--;
+	}
 }
