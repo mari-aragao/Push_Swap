@@ -6,11 +6,11 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 00:28:32 by maragao           #+#    #+#             */
-/*   Updated: 2022/11/29 19:19:53 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/12 18:55:34 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	lst_add_front(t_list **lst, t_list *new)
 {

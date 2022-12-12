@@ -1,43 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_functions.c                                  :+:      :+:    :+:   */
+/*   lst_clear.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 22:21:53 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/10 22:23:07 by maragao          ###   ########.fr       */
+/*   Created: 2022/05/26 01:17:13 by maragao           #+#    #+#             */
+/*   Updated: 2022/12/12 18:55:43 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	print_stack(t_list *stack)
+void	lst_clear(t_list **lst)
 {
-	while(stack)
-	{
-		ft_putnbr(stack->content);
-		write(1, " ", 1);
-		stack = stack->next;
-	}
-}
+	t_list	*ptr;
+	t_list	*ptr2;
 
-void	print_index(t_list *stack)
-{
-	while(stack)
+	ptr = *lst;
+	while (ptr)
 	{
-		ft_putnbr(stack->index);
-		write(1, " ", 1);
-		stack = stack->next;
+		ptr2 = ptr -> next;
+		free(ptr->bin);
+		free(ptr);
+		ptr = ptr2;
 	}
-}
-
-void	print_bin(t_list *stack)
-{
-	while(stack)
-	{
-		printf("%s", stack->bin);
-		printf("  ");
-		stack = stack->next;
-	}
+	*lst = NULL;
 }

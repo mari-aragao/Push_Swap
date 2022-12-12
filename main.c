@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:44:34 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 18:19:32 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/12 19:18:34 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*fill_stack(char **argv)
 {
-	int	i;
+	int		i;
 	t_list	*stack;
 
 	stack = lst_new(ft_atoi(argv[1]));
@@ -26,7 +26,7 @@ t_list	*fill_stack(char **argv)
 
 void	sort_call(int argc, t_list **stack_a, t_list **stack_b)
 {
-	t_list *temp;
+	t_list	*temp;
 
 	temp = *stack_a;
 	if (argc == 3)
@@ -36,7 +36,7 @@ void	sort_call(int argc, t_list **stack_a, t_list **stack_b)
 	}
 	if (argc == 4)
 		sort_three(stack_a);
-	else if (argc == 5 || argc ==  6)
+	else if (argc == 5 || argc == 6)
 		sort_five(stack_a, stack_b);
 	else if (argc > 6 && argc <= 501)
 		radix_sort(argc, stack_a, stack_b);

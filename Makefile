@@ -2,23 +2,23 @@ NAME	= push_swap
 
 SRCS	=	\
 		main.c \
-		utils.c \
-		checks.c \
-		lst_new.c \
-		lst_size.c \
-		lst_clear.c \
-		lst_last.c \
-		lst_add_back.c \
-		lst_add_front.c \
-		swap.c \
-		rotate.c \
-		reverse_rotate.c\
-		push.c \
-		sort_three.c \
-		sort_five.c \
-		radix.c \
-		print_functions.c \
-		index.c
+		./utils/utils.c \
+		./utils/checks.c \
+		./linked_list/lst_new.c \
+		./linked_list/lst_size.c \
+		./linked_list/lst_clear.c \
+		./linked_list/lst_last.c \
+		./linked_list/lst_add_back.c \
+		./linked_list/lst_add_front.c \
+		./commands/swap.c \
+		./commands/rotate.c \
+		./commands/reverse_rotate.c\
+		./commands/push.c \
+		./algorithms/sort_three.c \
+		./algorithms/sort_five.c \
+		./algorithms/radix.c \
+		./utils/print_functions.c \
+		./utils/index.c
 
 OBJS	= ${SRCS:.c=.o}
 

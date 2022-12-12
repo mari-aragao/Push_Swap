@@ -6,11 +6,11 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 00:31:20 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/11 20:43:55 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/12 19:00:34 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_atoi(char *s)
 {
@@ -61,7 +61,7 @@ void	ft_putnbr(int n)
 	res = 0;
 	if (n == -2147483648)
 	{
-		write(1,"-2147483648", 11);
+		write(1, "-2147483648", 11);
 		return ;
 	}
 	if (n < 0)
@@ -78,7 +78,7 @@ void	ft_putnbr(int n)
 char	*binary_converter(int n)
 {
 	char	*bin;
-	int	i;
+	int		i;
 
 	bin = (char *)malloc(9 * sizeof(char));
 	i = 8;

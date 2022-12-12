@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_add_back.c                                     :+:      :+:    :+:   */
+/*   print_functions.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 01:01:15 by maragao           #+#    #+#             */
-/*   Updated: 2022/11/29 20:47:51 by maragao          ###   ########.rio      */
+/*   Created: 2022/12/10 22:21:53 by maragao           #+#    #+#             */
+/*   Updated: 2022/12/12 19:00:21 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-void	lst_add_back(t_list *lst, t_list *new)
+void	print_stack(t_list *stack)
 {
-	t_list	*ptr;
+	while (stack)
+	{
+		ft_putnbr(stack->content);
+		write(1, " ", 1);
+		stack = stack->next;
+	}
+}
 
-	if (lst == NULL || !lst)
+void	print_index(t_list *stack)
+{
+	while (stack)
 	{
-		lst = new;
-		lst->next = NULL;
+		ft_putnbr(stack->index);
+		write(1, " ", 1);
+		stack = stack->next;
 	}
-	else
-	{
-		ptr = lst_last(lst);
-		ptr->next = new;
-		new->next = NULL;
-	}
-	}
+}

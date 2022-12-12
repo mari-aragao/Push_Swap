@@ -6,11 +6,11 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 21:11:33 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/08 17:52:13 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/12 18:53:52 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	find_two_smallest(t_list **stack_a, t_list **stack_b)
 {

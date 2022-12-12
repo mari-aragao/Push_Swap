@@ -6,11 +6,11 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 12:13:27 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/11 12:14:37 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/12 18:54:25 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	push(t_list **stack1, t_list **stack2)
 {

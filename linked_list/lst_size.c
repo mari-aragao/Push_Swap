@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_new.c                                          :+:      :+:    :+:   */
+/*   lst_size.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 00:24:44 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/10 22:14:54 by maragao          ###   ########.fr       */
+/*   Created: 2022/05/26 00:46:50 by maragao           #+#    #+#             */
+/*   Updated: 2022/12/12 18:56:20 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
 
-t_list	*lst_new(int content)
+#include "../push_swap.h"
+
+int	lst_size(t_list *lst)
 {
-	t_list	*ptr;
+	int	size;
 
-	ptr = (t_list *) malloc (sizeof(t_list));
-	if (!ptr)
-		return (NULL);
-	ptr->content = content;
-	ptr->index = 0;
-	ptr->bin = NULL;
-	ptr->next = NULL;
-	return (ptr);
+	size = 0;
+	while (lst)
+	{
+		size++;
+		lst = lst -> next;
+	}
+	return (size);
 }

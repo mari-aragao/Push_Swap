@@ -6,20 +6,20 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 21:40:53 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/10 22:23:43 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/12 19:02:27 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	*sort_array(int argc, int *arr)
 {
-	int i;
-	int j;
-	int temp;
+	int	i;
+	int	j;
+	int	temp;
 
 	i = 0;
-	while(i < argc - 2)
+	while (i < argc - 2)
 	{
 		j = i + 1;
 		while (j < argc - 1)
@@ -43,7 +43,6 @@ int	*create_array(int argc, char **argv)
 	int	i;
 	int	*arr;
 
-
 	len = argc - 1;
 	arr = malloc(len * sizeof(int));
 	if (!arr)
@@ -54,15 +53,13 @@ int	*create_array(int argc, char **argv)
 		arr[i] = ft_atoi(argv[i + 1]);
 		i++;
 	}
-
 	return (sort_array(argc, arr));
 }
 
-
-void	make_index(int argc, char **argv,  t_list **stack_a)
+void	make_index(int argc, char **argv, t_list **stack_a)
 {
-	int	i;
-	int	*arr;
+	int		i;
+	int		*arr;
 	t_list	*temp;
 
 	arr = create_array(argc, argv);
@@ -70,7 +67,7 @@ void	make_index(int argc, char **argv,  t_list **stack_a)
 	while (temp)
 	{
 		i = 0;
-		while(i < argc - 1)
+		while (i < argc - 1)
 		{		
 			if (temp->content == arr[i])
 			{
