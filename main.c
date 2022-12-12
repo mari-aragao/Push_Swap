@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:44:34 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/11 12:38:17 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/11 20:54:52 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	sort_call(int argc, t_list **stack_a, t_list **stack_b)
 		sort_three(stack_a);
 	else if (argc == 5 || argc ==  6)
 		sort_five(stack_a, stack_b);
-	else if (argc > 6 && argc < 501)
+	else if (argc > 6 && argc <= 501)
 		radix_sort(argc, stack_a, stack_b);
 }
 
@@ -41,24 +41,9 @@ int	main(int argc, char **argv)
 
 	stack_b = NULL;
 	if (all_checks(argc, argv) == -1)
-	{
-		write(1, "Error\n", 6);
 		return (0);
-	}
 	stack_a = fill_stack(argv);
 	make_index(argc, argv, &stack_a);
-//	print_index(stack_a);
-	printf("1o stack a: \n");
-	print_bin(stack_a);
-	printf("\n");
 	sort_call(argc, &stack_a, &stack_b);
-
-	//print_index(stack_a);
-	//print_stack(stack_a);
-	printf("2o stack a: \n");
-	print_bin(stack_a);
-	printf("\n");
-	printf("1o stack b: \n");
-	print_bin(stack_b);
 	return (0);
 }
