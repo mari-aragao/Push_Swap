@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:41:41 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/11 11:26:09 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/12 17:32:17 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,5 @@ int	*create_array(int argc, char **argv);
 void	make_index(int argc, char **argv, t_list **stack_a);
 char	*binary_converter(int n);
 void	radix_sort(int argc, t_list **stack_a, t_list **stack_b);
-
+int		check_already_sorted(int argc, char **argv);
 #endif

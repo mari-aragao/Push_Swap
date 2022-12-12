@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:44:34 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/11 20:54:52 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/12 17:32:02 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,15 @@ t_list	*fill_stack(char **argv)
 
 void	sort_call(int argc, t_list **stack_a, t_list **stack_b)
 {
-	if (argc == 3 || argc == 4)
+	t_list *temp;
+
+	temp = *stack_a;
+	if (argc == 3)
+	{
+		if (temp->content > temp->next->content)
+			swap_a(stack_a);
+	}
+	if (argc == 4)
 		sort_three(stack_a);
 	else if (argc == 5 || argc ==  6)
 		sort_five(stack_a, stack_b);
