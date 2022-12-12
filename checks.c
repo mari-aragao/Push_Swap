@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 17:11:32 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 17:37:50 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/12 18:26:39 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int	all_checks(int argc, char **argv)
 		write(2, "Error\n", 6);
 		return(-1);	
 	}
-	//if (check_already_sorted(argc, argv) == -1)
-	//	return(-1);	
+	if (check_already_sorted(argc, argv) == -1)
+		return(-1);	
 	return (0);
 }
 
@@ -43,9 +43,11 @@ int	check_already_sorted(int argc, char **argv)
 		temp1 = ft_atoi(argv[i]);
 		temp2 = ft_atoi(argv[i + 1]);
 		if (temp1 > temp2)
-			return (-1);
+			break ;
 		i++;
 	}
+	if (i == argc)
+		return (-1);
 	return (0);
 }
 

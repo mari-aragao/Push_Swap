@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:44:34 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 17:32:02 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/12 18:19:32 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,6 @@ int	main(int argc, char **argv)
 	stack_a = fill_stack(argv);
 	make_index(argc, argv, &stack_a);
 	sort_call(argc, &stack_a, &stack_b);
+	lst_clear(&stack_a);
 	return (0);
 }

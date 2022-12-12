@@ -6,6 +6,7 @@ SRCS	=	\
 		checks.c \
 		lst_new.c \
 		lst_size.c \
+		lst_clear.c \
 		lst_last.c \
 		lst_add_back.c \
 		lst_add_front.c \
