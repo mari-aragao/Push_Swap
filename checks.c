@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 17:11:32 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/11 20:52:24 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/12 16:29:07 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	check_number(char **argv)
 				return(-1);	
 			if (j != 0 && (argv[i][j] == '-' || argv[i][j] == '+'))
 				return(-1);	
-			if (j == 0 && (argv[i][j] == '-' || argv[i][j] == '+') && !(argv[i][j + 1] >= '0' && argv[i][j + 1] <= 9))
+			if (j == 0 && (argv[i][j] == '-' || argv[i][j] == '+') && (argv[i][1] < '0' && argv[i][1] > 9))
 				return(-1);	
 			j++;
 		}
