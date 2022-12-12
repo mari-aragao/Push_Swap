@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:41:41 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 19:17:42 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/12 19:57:58 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void		reverse_rotate_b(t_list **stack_b);
 void		reverse_rotate_rrr(t_list **stack_a, t_list **stack_b);
 void		sort_three(t_list **stack_a);
 void		sort_five(t_list **stack_a, t_list **stack_b);
+void		sort_four(t_list **stack_a, t_list **stack_b);
 int			*sort_array(int argc, int *arr);
 int			*create_array(int argc, char **argv);
 void		make_index(int argc, char **argv, t_list **stack_a);

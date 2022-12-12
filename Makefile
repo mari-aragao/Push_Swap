@@ -15,6 +15,7 @@ SRCS	=	\
 		./commands/reverse_rotate.c\
 		./commands/push.c \
 		./algorithms/sort_three.c \
+		./algorithms/sort_four.c \
 		./algorithms/sort_five.c \
 		./algorithms/radix.c \
 		./utils/print_functions.c \
