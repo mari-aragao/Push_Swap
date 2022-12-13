@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:41:41 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 20:58:43 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/12 21:14:29 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct s_list
 //main
 int			main(int argc, char **argv);
 t_list		*fill_stack(char **argv);
-void	sort_call(int argc, t_list **stack_a, t_list **stack_b);
+void		sort_call(int argc, t_list **stack_a, t_list **stack_b);
 
 //utils.c
 int			is_digit(int c);

@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 19:54:15 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 20:12:10 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/12 21:23:09 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,27 @@
 
 void	sort_three(t_list **stack_a)
 {
-	t_list	*first;
-	t_list	*second;
-	t_list	*third;
+	int	first;
+	int	second;
+	int	third;
 
-	first = *stack_a;
-	second = first->next;
-	third = lst_last(first);
-	if (first->content > second->content \
-	&& first->content < third->content && third->content > second->content)
-	{
+	first = (*stack_a)->content;
+	second = (*stack_a)->next->content;
+	third = lst_last(*stack_a)->content;
+	if (first > second && first < third && third > second)
 		swap_a(stack_a);
-	}
-	if (first->content > second->content \
-	&& first->content > third->content && second->content > third->content)
+	if (first > second && first > third && second > third)
 	{
 		swap_a(stack_a);
 		reverse_rotate_a(stack_a);
 	}
-	if (first->content > second->content \
-	&& first->content > third->content && second->content < third->content)
+	if (first > second && first > third && second < third)
 		rotate_a(stack_a);
-	if (first->content < second->content \
-	&& first->content < third->content && third->content < second->content)
+	if (first < second && first < third && third < second)
 	{
 		swap_a(stack_a);
 		rotate_a(stack_a);
 	}
-	if (first->content < second->content \
-	&& first->content > third->content && second->content > third->content)
+	if (first < second && first > third && second > third)
 		reverse_rotate_a(stack_a);
 }
