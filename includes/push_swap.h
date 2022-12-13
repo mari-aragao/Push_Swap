@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 17:41:41 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 21:14:29 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/13 17:27:20 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,8 @@ void		find_two_smallest(t_list **stack_a, t_list **stack_b);
 void		sort_five(t_list **stack_a, t_list **stack_b);
 void		find_smallest(t_list **stack_a, t_list **stack_b);
 void		sort_four(t_list **stack_a, t_list **stack_b);
+int			validation(t_list **stack_a, int i);
+int			condition(t_list **stack_a, t_list **stack_b, int i);
 void		radix_sort(int argc, t_list **stack_a, t_list **stack_b);
 
 //index.c
