@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 17:11:32 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/13 18:58:23 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/13 19:18:01 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	check_already_sorted(int argc, char **argv)
 			break ;
 		i++;
 	}
-	if (i == argc)
+	if (i == argc - 1)
 		return (-1);
 	return (0);
 }
