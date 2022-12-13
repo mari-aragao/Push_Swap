@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 19:54:15 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 21:23:09 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/13 18:20:04 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	sort_three(t_list **stack_a)
 
 	first = (*stack_a)->content;
 	second = (*stack_a)->next->content;
-	third = lst_last(*stack_a)->content;
+	third = (lst_last(*stack_a))->content;
 	if (first > second && first < third && third > second)
 		swap_a(stack_a);
 	if (first > second && first > third && second > third)

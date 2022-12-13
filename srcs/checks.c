@@ -6,7 +6,7 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 17:11:32 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 20:41:00 by maragao          ###   ########.fr       */
+/*   Updated: 2022/12/13 18:58:23 by maragao          ###   ########.rio      */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	check_already_sorted(int argc, char **argv)
 	int	temp2;
 
 	i = 1;
-	while (i <= argc)
+	while (i < argc - 1)
 	{
 		temp1 = ft_atoi(argv[i]);
 		temp2 = ft_atoi(argv[i + 1]);

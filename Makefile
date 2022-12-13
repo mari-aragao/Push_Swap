@@ -23,15 +23,10 @@ SRCS	=	\
 
 INCLUDES	= ./includes
 
-OBJS	= ${SRCS:.c=.o}
+CC	= -Wall -Wextra -Werror -g
 
-CC	= -Wall -Wextra -Werror
-
-.c.o:
-	cc ${CC} -c $< -o ${<:.c=.o}
-
-${NAME}:	${OBJS}	
-	cc ${CC} -I ${INCLUDES} ${OBJS} -o ${NAME}
+${NAME}:	${SRCS}	
+	gcc ${CC} -I ${INCLUDES} ${SRCS} -o ${NAME}
 
 all:	${NAME}
 
