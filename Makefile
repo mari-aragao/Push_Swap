@@ -1,25 +1,27 @@
 NAME	= push_swap
 
 SRCS	=	\
-		main.c \
-		./utils/utils.c \
-		./utils/checks.c \
-		./linked_list/lst_new.c \
-		./linked_list/lst_size.c \
-		./linked_list/lst_clear.c \
-		./linked_list/lst_last.c \
-		./linked_list/lst_add_back.c \
-		./linked_list/lst_add_front.c \
-		./commands/swap.c \
-		./commands/rotate.c \
-		./commands/reverse_rotate.c\
-		./commands/push.c \
-		./algorithms/sort_three.c \
-		./algorithms/sort_four.c \
-		./algorithms/sort_five.c \
-		./algorithms/radix.c \
-		./utils/print_functions.c \
-		./utils/index.c
+		./srcs/main.c \
+		./srcs/utils.c \
+		./srcs/checks.c \
+		./srcs/lst_new.c \
+		./srcs/lst_size.c \
+		./srcs/lst_clear.c \
+		./srcs/lst_last.c \
+		./srcs/lst_add_back.c \
+		./srcs/lst_add_front.c \
+		./srcs/swap.c \
+		./srcs/rotate.c \
+		./srcs/reverse_rotate.c\
+		./srcs/push.c \
+		./srcs/sort_three.c \
+		./srcs/sort_four.c \
+		./srcs/sort_five.c \
+		./srcs/radix.c \
+		./srcs/print_functions.c \
+		./srcs/index.c
+
+INCLUDES	= ./includes
 
 OBJS	= ${SRCS:.c=.o}
 
@@ -29,7 +31,7 @@ CC	= -Wall -Wextra -Werror
 	cc ${CC} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}	
-	cc ${CC} ${OBJS} -o ${NAME}
+	cc ${CC} -I ${INCLUDES} ${OBJS} -o ${NAME}
 
 all:	${NAME}
 

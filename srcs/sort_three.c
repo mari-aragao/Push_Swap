@@ -6,11 +6,11 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 19:54:15 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 19:16:04 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/12 20:12:10 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 void	sort_three(t_list **stack_a)
 {

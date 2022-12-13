@@ -6,11 +6,16 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 00:31:20 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 19:00:34 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/12 20:45:19 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
+
+int	is_digit(int c)
+{
+	return(c >= 48 && c <= 57);
+}
 
 int	ft_atoi(char *s)
 {
@@ -73,20 +78,4 @@ void	ft_putnbr(int n)
 		ft_putnbr(n / 10);
 	res = n % 10 + '0';
 	write (1, &res, 1);
-}
-
-char	*binary_converter(int n)
-{
-	char	*bin;
-	int		i;
-
-	bin = (char *)malloc(9 * sizeof(char));
-	i = 8;
-	while (i >= 0)
-	{
-		bin[i] = n % 2 + '0';
-		n = n / 2;
-		i--;
-	}
-	return (bin);
 }

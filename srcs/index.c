@@ -6,11 +6,11 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 21:40:53 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 19:02:27 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/12 20:43:46 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 int	*sort_array(int argc, int *arr)
 {
@@ -56,6 +56,22 @@ int	*create_array(int argc, char **argv)
 	return (sort_array(argc, arr));
 }
 
+char	*create_bin(int n)
+{
+	char	*bin;
+	int		i;
+
+	bin = (char *)malloc(9 * sizeof(char));
+	i = 8;
+	while (i >= 0)
+	{
+		bin[i] = n % 2 + '0';
+		n = n / 2;
+		i--;
+	}
+	return (bin);
+}
+
 void	make_index(int argc, char **argv, t_list **stack_a)
 {
 	int		i;
@@ -72,7 +88,7 @@ void	make_index(int argc, char **argv, t_list **stack_a)
 			if (temp->content == arr[i])
 			{
 				temp->index = i;
-				temp->bin = binary_converter(i);
+				temp->bin = create_bin(i);
 				break ;
 			}
 			i++;

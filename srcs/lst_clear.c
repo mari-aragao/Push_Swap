@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_last.c                                         :+:      :+:    :+:   */
+/*   lst_clear.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 00:52:10 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 18:55:52 by maragao          ###   ########.rio      */
+/*   Created: 2022/05/26 01:17:13 by maragao           #+#    #+#             */
+/*   Updated: 2022/12/12 20:10:05 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
-t_list	*lst_last(t_list *lst)
+void	lst_clear(t_list **lst)
 {
 	t_list	*ptr;
-	int		i;
+	t_list	*ptr2;
 
-	ptr = lst;
-	i = 0;
+	ptr = *lst;
 	while (ptr)
 	{
-		ptr = ptr->next;
-		i++;
+		ptr2 = ptr -> next;
+		free(ptr->bin);
+		free(ptr);
+		ptr = ptr2;
 	}
-	while (--i > 0)
-		lst = lst->next;
-	return (lst);
+	*lst = NULL;
 }

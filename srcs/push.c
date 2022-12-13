@@ -1,46 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/01 19:21:09 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 19:10:22 by maragao          ###   ########.rio      */
+/*   Created: 2022/12/11 12:13:27 by maragao           #+#    #+#             */
+/*   Updated: 2022/12/12 20:11:11 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
-void	swap(t_list **stack)
+void	push(t_list **stack1, t_list **stack2)
 {
 	t_list	*temp;
 	t_list	*temp2;
+	t_list	*temp3;
 
-	if (lst_size(*stack) == 0 || lst_size(*stack) == 1)
+	if (lst_size(*stack1) == 0)
 		return ;
-	temp = *stack;
+	temp = *stack1;
 	temp2 = temp->next;
-	temp->next = temp->next->next;
-	temp2->next = temp;
-	*stack = temp2;
+	temp->next = NULL;
+	*stack1 = temp2;
+	temp3 = *stack2;
+	temp->next = temp3;
+	*stack2 = temp;
 }
 
-void	swap_a(t_list **stack_a)
+void	push_a(t_list **stack_a, t_list **stack_b)
 {
-	swap(stack_a);
-	write(1, "sa\n", 3);
+	push(stack_b, stack_a);
+	write(1, "pa\n", 3);
 }
 
-void	swap_b(t_list **stack_b)
+void	push_b(t_list **stack_a, t_list **stack_b)
 {
-	swap(stack_b);
-	write(1, "sb\n", 3);
-}
-
-void	swap_ss(t_list **stack_a, t_list **stack_b)
-{
-	swap(stack_a);
-	swap(stack_b);
-	write(1, "ss\n", 3);
+	push(stack_a, stack_b);
+	write(1, "pb\n", 3);
 }

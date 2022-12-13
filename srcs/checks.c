@@ -6,11 +6,11 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 17:11:32 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 19:09:09 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/12 20:41:00 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 int	all_checks(int argc, char **argv)
 {
@@ -53,9 +53,8 @@ int	check_already_sorted(int argc, char **argv)
 
 int	check_number(char **argv)
 {
-	int			i;
-	int			j;
-	long int	temp;
+	int	i;
+	int	j;
 
 	i = 1;
 	while (argv[i])
@@ -63,18 +62,18 @@ int	check_number(char **argv)
 		j = 0;
 		while (argv[i][j])
 		{
-			if (!(argv[i][j] >= '0' && argv[i][j] <= '9') &&
+			if (!(is_digit(argv[i][j])) &&
 					argv[i][j] != '-' && argv[i][j] != '+')
 				return (-1);
 			if (j != 0 && (argv[i][j] == '-' || argv[i][j] == '+'))
 				return (-1);
-			if (j == 0 && (argv[i][j] == '-' || argv[i][j] == '+') &&
-					(argv[i][1] < '0' && argv[i][1] > 9))
+			if (j == 0 && (argv[i][j] == '-' || argv[i][j] == '+') \
+				&& (!(is_digit(argv[i][1]))))
 				return (-1);
 			j++;
 		}
-		temp = ft_atoi_long(argv[i]);
-		if (temp < -2147483648 || temp > 2147483647)
+		if (ft_atoi_long(argv[i]) < -2147483648 \
+			|| ft_atoi_long(argv[i]) > 2147483647)
 			return (-1);
 		i++;
 	}

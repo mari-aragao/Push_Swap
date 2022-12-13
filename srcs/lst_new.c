@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_functions.c                                  :+:      :+:    :+:   */
+/*   lst_new.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/10 22:21:53 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 19:00:21 by maragao          ###   ########.rio      */
+/*   Created: 2022/05/26 00:24:44 by maragao           #+#    #+#             */
+/*   Updated: 2022/12/12 20:10:24 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
-void	print_stack(t_list *stack)
+t_list	*lst_new(int content)
 {
-	while (stack)
-	{
-		ft_putnbr(stack->content);
-		write(1, " ", 1);
-		stack = stack->next;
-	}
-}
+	t_list	*ptr;
 
-void	print_index(t_list *stack)
-{
-	while (stack)
-	{
-		ft_putnbr(stack->index);
-		write(1, " ", 1);
-		stack = stack->next;
-	}
+	ptr = (t_list *) malloc (sizeof(t_list));
+	if (!ptr)
+		return (NULL);
+	ptr->content = content;
+	ptr->index = 0;
+	ptr->bin = NULL;
+	ptr->next = NULL;
+	return (ptr);
 }

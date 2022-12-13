@@ -1,42 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/11 12:13:27 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 18:54:25 by maragao          ###   ########.rio      */
+/*   Created: 2022/12/01 19:27:32 by maragao           #+#    #+#             */
+/*   Updated: 2022/12/12 20:11:39 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
-void	push(t_list **stack1, t_list **stack2)
+void	rotate(t_list **stack)
 {
 	t_list	*temp;
 	t_list	*temp2;
 	t_list	*temp3;
 
-	if (lst_size(*stack1) == 0)
+	if (lst_size(*stack) == 0 || lst_size(*stack) == 1)
 		return ;
-	temp = *stack1;
-	temp2 = temp->next;
+	temp = *stack;
+	temp2 = lst_last(*stack);
+	temp3 = temp->next;
+	temp2->next = temp;
 	temp->next = NULL;
-	*stack1 = temp2;
-	temp3 = *stack2;
-	temp->next = temp3;
-	*stack2 = temp;
+	*stack = temp3;
 }
 
-void	push_a(t_list **stack_a, t_list **stack_b)
+void	rotate_a(t_list **stack_a)
 {
-	push(stack_b, stack_a);
-	write(1, "pa\n", 3);
+	rotate(stack_a);
+	write(1, "ra\n", 3);
 }
 
-void	push_b(t_list **stack_a, t_list **stack_b)
+void	rotate_b(t_list **stack_b)
 {
-	push(stack_a, stack_b);
-	write(1, "pb\n", 3);
+	rotate(stack_b);
+	write(1, "rb\n", 3);
+}
+
+void	rotate_rr(t_list **stack_a, t_list **stack_b)
+{
+	rotate(stack_a);
+	rotate(stack_b);
+	write(1, "rr\n", 3);
 }

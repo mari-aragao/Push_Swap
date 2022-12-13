@@ -6,11 +6,11 @@
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 22:25:02 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 19:14:31 by maragao          ###   ########.rio      */
+/*   Updated: 2022/12/12 20:11:22 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 void	radix_sort(int argc, t_list **stack_a, t_list **stack_b)
 {

@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_size.c                                         :+:      :+:    :+:   */
+/*   lst_add_back.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 00:46:50 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 18:56:20 by maragao          ###   ########.rio      */
+/*   Created: 2022/05/26 01:01:15 by maragao           #+#    #+#             */
+/*   Updated: 2022/12/12 20:09:40 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
-int	lst_size(t_list *lst)
+void	lst_add_back(t_list *lst, t_list *new)
 {
-	int	size;
+	t_list	*ptr;
 
-	size = 0;
-	while (lst)
+	if (lst == NULL || !lst)
 	{
-		size++;
-		lst = lst -> next;
+		lst = new;
+		lst->next = NULL;
 	}
-	return (size);
+	else
+	{
+		ptr = lst_last(lst);
+		ptr->next = new;
+		new->next = NULL;
+	}
 }

@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_new.c                                          :+:      :+:    :+:   */
+/*   lst_last.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 00:24:44 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 18:56:07 by maragao          ###   ########.rio      */
+/*   Created: 2022/05/26 00:52:10 by maragao           #+#    #+#             */
+/*   Updated: 2022/12/12 20:10:15 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
-t_list	*lst_new(int content)
+t_list	*lst_last(t_list *lst)
 {
 	t_list	*ptr;
+	int		i;
 
-	ptr = (t_list *) malloc (sizeof(t_list));
-	if (!ptr)
-		return (NULL);
-	ptr->content = content;
-	ptr->index = 0;
-	ptr->bin = NULL;
-	ptr->next = NULL;
-	return (ptr);
+	ptr = lst;
+	i = 0;
+	while (ptr)
+	{
+		ptr = ptr->next;
+		i++;
+	}
+	while (--i > 0)
+		lst = lst->next;
+	return (lst);
 }

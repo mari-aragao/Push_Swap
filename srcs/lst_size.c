@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_add_front.c                                    :+:      :+:    :+:   */
+/*   lst_size.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maragao <maragao@student.42.rio>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 00:28:32 by maragao           #+#    #+#             */
-/*   Updated: 2022/12/12 18:55:34 by maragao          ###   ########.rio      */
+/*   Created: 2022/05/26 00:46:50 by maragao           #+#    #+#             */
+/*   Updated: 2022/12/12 20:10:34 by maragao          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
-void	lst_add_front(t_list **lst, t_list *new)
+int	lst_size(t_list *lst)
 {
-	new->next = *lst;
-	*lst = new;
+	int	size;
+
+	size = 0;
+	while (lst)
+	{
+		size++;
+		lst = lst -> next;
+	}
+	return (size);
 }
